@@ -21,18 +21,31 @@ The boundary data was saved as GeoJSON, since Tableau can connect natively, and 
 
  Dashboards were kept tidy by limiting each to a handful of KPIs and charts, with the headline numbers at the top, so a reader can get the main takeaway in seconds and use filters to dig deeper.
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/36765d2b-0fcd-4b66-ae58-b2291b0d7e66" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/dad80773-ed98-4641-8b3f-7f7524defa9b" />
+
 
 Transportation Demand tracks total trips and miles, trips by hour, a weekday-by-hour heatmap, average trip duration by week, and average trip distance by weekday. Demand is concentrated on weekdays between 7 AM and 7 PM, with peaks around 9 AM and 5 PM. Weekly average trip length holds steady at about 20 minutes and 6 miles. This matches the rhythm of the work day and suggests commuting drives much of the demand.
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/efdd65b7-41da-4d26-8c75-2733ed6b6872" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/5c9b670f-75a6-4873-baf8-63b640251417" />
+
 
 Earnings Overview covers payment method mix, average trip value, total revenue, dollars per mile, revenue by company, average fare by distance, and a company performance table. Nearly half of riders pay by credit card. The average trip is worth about $30 and averages $3.13 per mile, which adds up to more than $31 million in revenue over the period. Flash Cab, Taxicab Insurance Agency LLC (TIA), and Transit Administrative Center Inc (TAC) are the top performers. Fare rises with trip length, as expected.
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/55bc482e-51bf-4d11-b041-4355c878bdd3" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/86949961-b18d-4f37-b1ef-f8ec4225e470" />
+
 
 Geographic Activity maps trip volume across Chicago’s 77 community areas, with a metric selector that recolors the map by total trips, trips per square mile, average fare, fare per mile, or market share. KPI cards show the top pickup and dropoff areas, and supporting charts show the busiest areas, net flow (pickups minus dropoffs), and company share in a selected neighborhood. Near North Side ranks first for both pickups and dropoffs, but it has roughly 20,000 more pickups than dropoffs, meaning more riders leave the area by taxi than arrive. One possible explanation is tourism, since visitors may arrive by other means and leave by cab, though there is no way to test this given the scope of the data. O’Hare Airport shows the largest net positive flow, consistent with travelers landing and taking a cab into the city. Flash Cab, TIA, and TAC together account for nearly half of all trips.
 
 Averages and per-mile rates exclude the roughly 1% of trips flagged as implausible, while trip counts and revenue include every trip so they reconcile to the source data. Footnotes on each dashboard document these choices, the City’s time rounding, and that 97.4% of trips have a known pickup area.
 
 # Recommendations
+- Three companies carry nearly half of trips, which is worth monitoring for market concentration.
+When a few operators hold a large share, a compliance problem, financial failure, or service change at one of them affects a large part of riders. It also affects how much leverage smaller operators have, and in the current market of ridesharing apps and services, there isn't much room for error.
+Recommend tracking the top-three share over time (monthly or yearly) to see whether concentration is growing or shrinking. Also check and see if this concentration varies geographically in the community. A company holding 70% of one neighborhood is a different situation than 30% citywide, and the Market Share map already surfaces this.
+- Demand is concentrated in weekday commute windows, which matters for enforcement or service planning.
+Weekday trips between 7 AM and 7 PM are the densest, peaking around 9 AM and 5 PM, which matches a typical work schedule. Predictable peaks tell the city when service is under the most strain, which is when wait times, refusals, and fare disputes are most likely.
+Reccomend Schedule inspections or consumer-protection outreach around peak windows if the goal is to reach the most riders. Also pay attention to off-peak hours, especially late nights and weekends, to see whether service coverage drops there. Note that "commuting" times is also a hypothesis, treat and test it as such, correlation != causation.
+ 
+- Airport and downtown areas dominate net flow, so coverage in lower-volume community areas may deserve a closer look.
+
+
